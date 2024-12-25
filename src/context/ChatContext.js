@@ -4,7 +4,7 @@ import {
   getContactsFromIndexedDB,
   saveMessageToIndexedDB,
   getMessagesFromIndexedDB,
-} from '../utils/indexedDB.js'; // Make sure this is the path to your IndexedDB utils
+} from '../utils/indexedDB.js'; 
 
 const ChatContext = createContext();
 
@@ -17,7 +17,7 @@ const initialState = {
 function chatReducer(state, action) {
   switch (action.type) {
     case 'SET_CONTACTS':
-      return { ...state, contacts: action.payload };
+      return { ...state, contacts: Array.isArray(action.payload) ? action.payload : [] };
     case 'SET_MESSAGES':
       return { ...state, messages: { ...state.messages, [action.contact]: action.payload } };
     case 'SET_CURRENT_CONTACT':

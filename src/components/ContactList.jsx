@@ -7,7 +7,7 @@ export const ContactList = () => {
   const { state, dispatch } = useChatContext();
   const { contacts, currentContact } = state;
   const [fetchedContacts, setFetchedContacts] = useState([]);
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchContacts = async () => {
@@ -16,7 +16,7 @@ export const ContactList = () => {
     };
 
     fetchContacts();
-  }, []); // This runs once when the component is mounted
+  }, []); 
 
   useEffect(() => {
     dispatch({ type: 'SET_CONTACTS', payload: fetchedContacts }); // Optionally update global state
@@ -24,22 +24,21 @@ export const ContactList = () => {
 
   return (
     <div className="contact-list" style={{ position: 'relative', height: '100vh' }}>
-      {/* "+" Button to navigate to Add Contact page */}
       <button
         className="add-contact-btn"
         onClick={() => navigate('/add-contact')} // Navigate to "add-contact" page
         style={{
           position: 'absolute',
-          bottom: '20vh', // Position at the bottom of the container
-          right: '20px',  // Position at the right of the container
-          padding: '15px', // Increased padding for better appearance
-          backgroundColor: '#25d366', // WhatsApp green
+          bottom: '20vh', 
+          right: '20px',  
+          padding: '15px', 
+          backgroundColor: '#25d366', 
           color: 'white',
           border: 'none',
           borderRadius: '50%',
-          fontSize: '30px', // Larger font size for better visibility
+          fontSize: '30px', 
           cursor: 'pointer',
-          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Add subtle shadow for better visibility
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', 
         }}
       >
         +
@@ -61,7 +60,7 @@ export const ContactList = () => {
         </div>
       ) : (
      
-        fetchedContacts.map((contact) => (
+        fetchedContacts.length  > 0 && fetchedContacts.map((contact) => (
           <div style={{padding:'2%', paddingTop:'5%'}}
             key={contact.id}
             className={`contact-item ${currentContact === contact.id ? 'active' : ''}`}
