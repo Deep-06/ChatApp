@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# ChatApp 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a chatting web interface built with React.js. It supports message persistence with IndexedDB, offline functionality, and more. The core features of ChatApp are chatting with contacts, add new contacts, displaying messages, and sending new ones.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Contact List: Display a list of contacts on the left side.
+- Add Contact: Add contact form to add new contact to the contact list.
+- Chat Window: Display the chat history of the selected contact on the right side.
+- Message Field: Allow users to send new messages.
+- Message Storage: Use InstantDB for message storage and retrieval.
+- Local Storage: Use IndexedDB to store the data locally for offline capabilities.
 
-### `npm start`
+## Dashboard
+The app displays a list of contacts on the left side of the screen and Chat window on the right side of the screen. Click on a contact to open the chat window.
+<img src='./public//Images/Dashboard.png' alt='dashboard'/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To add a new contact:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Navigate to the "Add Contact" section by clicking on the plus button in the contactlist section.
+Enter a contact name and phone number in the form provided.
+Click Add Contact to save the contact.
+<img src='./public//Images/Add contact.png' alt='dashboard'/>
 
-### `npm test`
+You can send messages by typing in the input field at the bottom and pressing "Enter" or clicking the send button.
+<img src='./public//Images/chatwindow 2.png' alt='dashboard'/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+When you select a contact, the messages with that contact appear in the main chat window.
+<img src='./public//Images/chatWindow 1.png' alt='dashboard'/>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Frontend: React.js
+- Backend: No backend for this version (All data is handled locally via IndexedDB).
+- Database: IndexedDB (for storing messages and contact information).
+- Styling: Custom CSS for the layout and design.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Deployment
+- vercel link: https://chat-app-sigma-lovat.vercel.app
